@@ -8,6 +8,7 @@ import cookieParser from "cookie-parser";
 
 dotenv.config()
 const app = express()
+const port = process.env.PORT || 3002
 
 try {
     await users_admin.authenticate()
@@ -29,6 +30,6 @@ app.use(router)
 
 
 
-app.listen(3002,()=>{
-    console.log("berhasil konek di port 3002")
+app.listen(port,()=>{
+    console.log(`berhasil konek di port ${port}`)
 })

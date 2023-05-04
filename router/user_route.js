@@ -7,6 +7,9 @@ import RefreshToken from "../controllers/refresh_token.js";
 
 const router = express.Router()
 
+router.get('/',(req,res) => {
+    res.json('url server database kami path /users dan membutuhkan token dengan /login untuk mendapatlan akses token ')
+})
 router.get('/users',verifyToken,GetUsers)
 router.post('/register',Register)
 router.post('/login',login)

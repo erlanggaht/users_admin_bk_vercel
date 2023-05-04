@@ -121,3 +121,4 @@ export const DeleteUser = async(req,res) => {
   res.status(200).json({msg : "berhasil menghapus akun"})
   
 } 
+
