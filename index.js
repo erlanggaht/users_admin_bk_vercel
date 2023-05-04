@@ -8,7 +8,7 @@ import cookieParser from "cookie-parser";
 
 dotenv.config()
 const app = express()
-const port = process.env.PORT || 3002
+const port = process.env.port || 3002
 
 try {
     await users_admin.authenticate()
