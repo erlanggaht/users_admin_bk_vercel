@@ -1,0 +1,40 @@
+GET http://localhost:3002/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1hIjoieXVkaSBtYXVsdWRpbiIsInVzZXJJZCI6MTcsImVtYWlsIjoieXVkaUBnbWFpbC5jb20iLCJpYXQiOjE2ODMwOTE5NDUsImV4cCI6MTY4MzA5MTk2MH0.F4SOwJvHl7AXBZIky_OzPrOvx6OrxS2n1XaPF-8cyRA
+
+
+
+###
+
+POST http://localhost:3002/register
+Content-Type: application/json
+
+{
+"nama" : "Erlangga Hidayatullah",
+"email" : "erlanggaht.md@gmail.com",
+"password" : "smd12",
+"confirmPassword" : "smd12"
+}
+
+###
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+    "email" : "yudi@gmail.com",
+    "password" : "sayur1212"
+}
+
+###
+PUT http://localhost:3002/update
+Content-Type: application/json
+
+{
+    "nama" : "erick",
+    "email" : "erickgmail.com" 
+}
+
+###
+GET http://localhost:3002/token
+
+###
+DELETE http://localhost:3002/logout
