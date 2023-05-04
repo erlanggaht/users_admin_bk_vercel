@@ -32,4 +32,8 @@ app.use(router)
 
 app.listen(port,()=>{
     console.log(`berhasil konek di port ${port}`)
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> dc9aacd6388a87ffb312b1183661543451420180
