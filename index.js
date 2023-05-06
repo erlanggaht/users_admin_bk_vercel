@@ -20,8 +20,9 @@ try {
 
 app.use(cookieParser())
 app.use(cors({
-    origin : true,
-    credentials : true
+    origin : '*',
+    credentials : true,
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
 }))
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
