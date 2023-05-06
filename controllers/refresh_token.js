@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 
 export default async function RefreshToken(req,res) {
   try {
-    const CookiesrefreshToken = req.cookies.RefreshToken
+    const CookiesrefreshTokenT = req.cookies.Refreshoken
     if(!CookiesrefreshToken) return res.sendStatus(401);
     const user = await admin_table.findAll({
         where : {

@@ -20,8 +20,8 @@ POST http://localhost:3002/login
 Content-Type: application/json
 
 {
-    "email" : "yudi@gmail.com",
-    "password" : "sayur1212"
+    "email" : "anggaplaystore701@gmail.com",
+    "password" : "sumedang12"
 }
 
 ###
@@ -34,7 +34,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3002/token
+GET http://users-admin-bk-vercel.vercel.app/token
 
 ###
 DELETE http://localhost:3002/logout

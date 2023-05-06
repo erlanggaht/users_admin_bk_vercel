@@ -59,7 +59,7 @@ export const login = async (req, res) => {
         maxAge : 86400000,
         secure: true,
         httpOnly: true,
-        sameSite: 'none'
+        sameSite: 'strict'
         
     })
     res.status(200).json({accesstoken})
