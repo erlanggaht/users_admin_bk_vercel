@@ -12,20 +12,18 @@ export const GetUsers = async (req, res) => {
 
 export const Register = async (req, res) => {
   const { nama, password, confirmPassword, email } = req.body;
-  if (password !== confirmPassword)
-    return res.json({ msg: "confirm password tidak cocok" });
-  const salt = await bcrypt.genSalt();
-  const password_hash = await bcrypt.hash(password, salt);
-
+  if (password !== confirmPassword) return res.json({ msg: "confirm password tidak cocok" });
+  let salt =await bcrypt.genSaltSync(10);
+  let hash = await bcrypt.hashSync(password, salt);
   try {
     await admin_table.create({
       nama: nama,
       email: email,
-      password: password_hash,
+      password: hash,
     });
     return res.status(200).json({ msg: "Register berhasil. silahkan login" });
   } catch (error) {
-    return res.status(400).json({ msg: "daftar gagal" });
+     res.status(400).json({ msg: "daftar gagal" });
   }
 };
 

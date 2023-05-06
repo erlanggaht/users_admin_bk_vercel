@@ -5,14 +5,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1hIjoieXVkaSBtY
 
 ###
 
-POST https://users-admin-bk-vercel.vercel.app/register
+POST http://localhost:3002/register
 Content-Type: application/json
 
 {
 "nama" : "Erlangga Hidayatullah",
-"email" : "erlanggaht.md@gmail.com",
-"password" : "smd12",
-"confirmPassword" : "smd12"
+"email" : "erlanggaht@gmail.com",
+"password" : "smd11",
+"confirmPassword" : "smd11"
 }
 
 ###
