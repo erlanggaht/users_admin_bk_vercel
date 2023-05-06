@@ -1,11 +1,9 @@
 import admin_table from "../models/user_model.js";
 import jwt from 'jsonwebtoken'
 
-
-
 export default async function RefreshToken(req,res) {
   try {
-    const CookiesrefreshTokenT = req.cookies.Refreshoken
+    const CookiesrefreshToken = req.cookies.RefreshToken
     if(!CookiesrefreshToken) return res.sendStatus(401);
     const user = await admin_table.findAll({
         where : {
@@ -21,7 +19,6 @@ export default async function RefreshToken(req,res) {
         const accesstoken = jwt.sign({nama,id,email},process.env.KEY_ACCESS_TOKEN,{
             expiresIn : '15s'
         })
-    
         res.json({accesstoken})
     })
   } catch (error) {
