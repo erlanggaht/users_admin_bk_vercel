@@ -20,9 +20,8 @@ try {
 
 app.use(cookieParser())
 app.use(cors({
-    origin : 'https://users-admin.vercel.app',
+    origin : true,
     credentials : true,
-    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
 }))
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
