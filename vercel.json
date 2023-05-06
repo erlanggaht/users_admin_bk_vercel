@@ -1,14 +1,5 @@
 {
     "version": 2,
-    "headers": [
-
-        {
-            
-          "source": "/api/(.*)"
-    
-        }
-    
-      ],
     "builds": [
         {
             "src": "./index.js",
