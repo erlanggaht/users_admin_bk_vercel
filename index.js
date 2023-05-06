@@ -9,7 +9,7 @@ import cookieParser from "cookie-parser";
 dotenv.config()
 const app = express()
 const port = process.env.PORT || 3002
-var allowedOrigins = ['http://localhost:3000','https://users-admin.vercel.app'];
+var allowedOrigins = ['http://localhost:3000/signup','https://users-admin.vercel.app'];
 
 try {
     await users_admin.authenticate()
