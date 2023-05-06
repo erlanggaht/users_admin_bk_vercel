@@ -19,7 +19,7 @@ try {
 }
 
 
-app.use(cookieParser())
+app.use(cookieParser({origin : true}))
 
 app.use(cors());
 
