@@ -19,7 +19,10 @@ export default async function RefreshToken(req,res) {
         const accesstoken = jwt.sign({nama,id,email},process.env.KEY_ACCESS_TOKEN,{
             expiresIn : '15s'
         })
-        res.json({accesstoken})
+        const refreshToken = jwt.sign({nama,id,email},process.env.KEY_REFRESH_TOKEN,{
+          expiresIn : '1d'
+        })
+        res.json({accesstoken,refreshToken})
     })
   } catch (error) {
     console.log(error)
