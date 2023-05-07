@@ -60,7 +60,7 @@ export const login = async (req, res) => {
         sameSite: 'none'
         
     })
-    res.status(200).json({accesstoken})
+    res.status(200).json({accesstoken,refreshtoken})
   } catch (error) {
     console.log({ loginError: "Login error" });
   }
